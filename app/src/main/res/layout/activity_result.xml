@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    android:gravity="center_horizontal"
+    android:padding="20dp"
+    tools:context=".ResultActivity">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/welldone"/>
+
+    <TextView
+        android:id="@+id/correct"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#87AB3A"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Correct Answers"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/wrong"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#F22C3F"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Wrong Answers"
+        android:textAlignment="center"
+        android:textColor="#263238"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#FFC107"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Total Answers"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="20dp">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularprogressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cpb_background_progressbar_color="#DC2517"
+            app:cpb_background_progressbar_width="12dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progress_max="10"
+            app:cpb_progressbar_color="#1BBD22"
+            app:cpb_progressbar_width="12dp"
+            app:cpb_round_border="false"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="10"
+            android:textColor="#FFC107"
+            android:textSize="50sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:layout_marginTop="40dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:backgroundTint="#E945BA"/>
+
+
+</LinearLayout>
