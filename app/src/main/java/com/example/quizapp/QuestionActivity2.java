@@ -20,7 +20,7 @@ public class QuestionActivity2 extends AppCompatActivity {
 
     int flag = 0;
     int marks = 0;
-    public static int correct =0;
+    int correct =0;
     int wrong = 0;
 
     String[] questions = {"What is the main purpose of the Java Virtual Machine (JVM)?",
@@ -118,13 +118,13 @@ public class QuestionActivity2 extends AppCompatActivity {
                 }
                 flag++;
                 if(score!= null) {
-                    score.setText(correct);
+                    score.setText(String.valueOf(correct));
                     if (flag < questions.length) {
                         question.setText(questions[flag]);
-                        rb1.setText(options[flag + 4]);
-                        rb2.setText(options[flag + 4 + 1]);
-                        rb3.setText(options[flag + 4 + 2]);
-                        rb4.setText(options[flag + 4 + 3]);
+                        rb1.setText(options[flag * 4]);
+                        rb2.setText(options[flag * 4 + 1]);
+                        rb3.setText(options[flag * 4 + 2]);
+                        rb4.setText(options[flag * 4 + 3]);
 
                         dispNo.setText((flag + 1) + "/" + questions.length);
                     } else {

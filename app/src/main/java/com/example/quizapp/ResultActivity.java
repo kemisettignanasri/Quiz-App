@@ -38,7 +38,7 @@ public class ResultActivity extends AppCompatActivity {
         result = findViewById(R.id.result);
         progressBar = findViewById(R.id.circularprogressbar);
 
-        progressBar.setProgress(QuetionActivity.correct);
+        progressBar.setProgress(getIntent().getIntExtra("correct", 0));
 
         Intent intent = getIntent();
         int attempted1 = intent.getIntExtra("attempted",0);

@@ -3,11 +3,7 @@ package com.example.quizapp;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,18 +11,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
+    private android.widget.Button signOutButton;
     private RecyclerView quizRecyclerView;
     private ArrayList<String> quizList;
-    private ProgressBar timerProgressBar;
-    private final int timeLimit = 30000; // 10 seconds
-    private final int interval = 100; // Update every 100ms
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,39 +34,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
         toolbar = findViewById(R.id.toolbar);
-        timerProgressBar = findViewById(R.id.timerProgressBar);
+        signOutButton = findViewById(R.id.signOutButton);
 
-        if (timerProgressBar != null) {
-            startTimer();
-        } else {
-            Toast.makeText(this, "Error: Timer ProgressBar not found!", Toast.LENGTH_SHORT).show();
-        }
+        signOutButton.setOnClickListener(view -> {
+            FirebaseAuth.getInstance().signOut();
+
+            Intent intent = new Intent(MainActivity.this, SignIn.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        });
     }
 
-    private void startTimer() {
-        if (timerProgressBar == null) return; // Avoids null pointer exception
 
-        timerProgressBar.setMax(100);
-        timerProgressBar.setProgress(100);
-
-        CountDownTimer countDownTimer = new CountDownTimer(timeLimit, interval) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                if (timerProgressBar != null) {
-                    int progress = (int) ((millisUntilFinished * 100) / timeLimit);
-                    timerProgressBar.setProgress(progress);
-                }
-            }
-
-            @Override
-            public void onFinish() {
-                if (timerProgressBar != null) {
-                    timerProgressBar.setProgress(0);
-                }
-                Toast.makeText(MainActivity.this, "Time is up!", Toast.LENGTH_SHORT).show();
-            }
-        }.start();
-    }
 
 
 
@@ -84,42 +58,58 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void java(View view) {
-        startActivity(new Intent(MainActivity.this, QuetionActivity.class));
+        Intent intent = new Intent(MainActivity.this, QuetionActivity.class);
+        intent.putExtra("subject", "Java");
+        startActivity(intent);
         finish();
     }
 
     public void kotlin(View view) {
-        startActivity(new Intent(MainActivity.this, QuestionActivity2.class));
+        Intent intent = new Intent(MainActivity.this, QuetionActivity.class);
+        intent.putExtra("subject", "Kotlin");
+        startActivity(intent);
         finish();
     }
 
     public void python(View view) {
-        startActivity(new Intent(MainActivity.this, QuetionActivity.class));
+        Intent intent = new Intent(MainActivity.this, QuetionActivity.class);
+        intent.putExtra("subject", "Python");
+        startActivity(intent);
         finish();
     }
 
     public void cpp(View view) {
-        startActivity(new Intent(MainActivity.this, QuetionActivity.class));
+        Intent intent = new Intent(MainActivity.this, QuetionActivity.class);
+        intent.putExtra("subject", "C++");
+        startActivity(intent);
         finish();
     }
 
     public void dart(View view) {
-        startActivity(new Intent(MainActivity.this, QuetionActivity.class));
+        Intent intent = new Intent(MainActivity.this, QuetionActivity.class);
+        intent.putExtra("subject", "Dart");
+        startActivity(intent);
         finish();
     }
 
     public void sql(View view) {
-        startActivity(new Intent(MainActivity.this, QuetionActivity.class));
+        Intent intent = new Intent(MainActivity.this, QuetionActivity.class);
+        intent.putExtra("subject", "SQL");
+        startActivity(intent);
         finish();
     }
 
     public void xml(View view) {
-        startActivity(new Intent(MainActivity.this, QuetionActivity.class));
+        Intent intent = new Intent(MainActivity.this, QuetionActivity.class);
+        intent.putExtra("subject", "XML");
+        startActivity(intent);
         finish();
     }
 
     public void c(View view) {
-        startActivity(new Intent(MainActivity.this, QuetionActivity.class));
+        Intent intent = new Intent(MainActivity.this, QuetionActivity.class);
+        intent.putExtra("subject", "C");
+        startActivity(intent);
         finish();
     }
 }

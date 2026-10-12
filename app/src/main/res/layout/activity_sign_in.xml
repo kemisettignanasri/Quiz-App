@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:padding="3dp"
-    android:background="#74B1E0"
+    android:background="@color/app_background"
     android:layout_height="match_parent"
     tools:context=".SignIn">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/register_background"
+        android:background="@color/card_background"
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
@@ -38,7 +38,8 @@
             android:layout_marginEnd="15dp"
             android:layout_marginStart="15dp"
             android:background="@drawable/edittext_background"
-            android:textColorHint="@color/black"/>
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/input_hint"/>
 
 
 
@@ -54,7 +55,8 @@
             android:layout_marginEnd="15dp"
             android:layout_marginStart="15dp"
             android:background="@drawable/edittext_background"
-            android:textColorHint="@color/black"/>
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/input_hint"/>
 
 
 

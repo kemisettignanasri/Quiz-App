@@ -145,8 +145,18 @@ public class SignUp extends AppCompatActivity {
                             Toast.makeText(SignUp.this,"User Registered", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(SignUp.this, MainActivity.class));
                             finishAffinity();
-                        }else {
-                            Toast.makeText(SignUp.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                        } else {
+                            progressBar.setVisibility(View.GONE);
+
+                            String errorMessage = (task.getException() != null)
+                                    ? task.getException().getMessage()
+                                    : "Unknown error";
+
+                            Log.e(TAG, "Registration failed", task.getException());
+
+                            Toast.makeText(SignUp.this,
+                                    "Registration Failed: " + errorMessage,
+                                    Toast.LENGTH_LONG).show();
                         }
                     }
                 });

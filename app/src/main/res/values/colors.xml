@@ -2,4 +2,24 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="app_background">#00BCD4</color>
+
+    <color name="text_primary">#040945</color>
+    <color name="text_secondary">#000000</color>
+
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="divider_color">#FF000000</color>
+    <color name="next_button">#188E0E</color>
+
+    <color name="input_background">#3AFFFFFF</color>
+    <color name="input_hint">#000000</color>
+
+    <color name="result_correct">#87AB3A</color>
+    <color name="result_wrong">#F22C3F</color>
+    <color name="result_total">#FFC107</color>
+    <color name="result_text">#263238</color>
+    <color name="result_progress_background">#DC2517</color>
+    <color name="result_progress">#1BBD22</color>
+    <color name="home_button">#E945BA</color>
 </resources>

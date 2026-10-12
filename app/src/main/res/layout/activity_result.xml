@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
+    android:background="@color/app_background"
     android:gravity="center_horizontal"
     android:padding="20dp"
     tools:context=".ResultActivity">
@@ -22,7 +22,7 @@
         android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="#87AB3A"
+        android:background="@color/result_correct"
         android:fontFamily="@font/roboto_medium"
         android:text="Correct Answers"
         android:textAlignment="center"
@@ -33,7 +33,7 @@
         android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="#F22C3F"
+        android:background="@color/result_wrong"
         android:fontFamily="@font/roboto_medium"
         android:text="Wrong Answers"
         android:textAlignment="center"
@@ -45,7 +45,7 @@
         android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="#FFC107"
+        android:background="@color/result_total"
         android:fontFamily="@font/roboto_medium"
         android:text="Total Answers"
         android:textAlignment="center"
@@ -60,11 +60,11 @@
             android:id="@+id/circularprogressbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cpb_background_progressbar_color="#DC2517"
+            app:cpb_background_progressbar_color="@color/result_progress_background"
             app:cpb_background_progressbar_width="12dp"
             app:cpb_progress_direction="to_right"
             app:cpb_progress_max="10"
-            app:cpb_progressbar_color="#1BBD22"
+            app:cpb_progressbar_color="@color/result_progress"
             app:cpb_progressbar_width="12dp"
             app:cpb_round_border="false"/>
 
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="10"
-            android:textColor="#FFC107"
+            android:textColor="@color/result_total"
             android:textSize="50sp"
             android:textStyle="bold"/>
 
@@ -88,7 +88,7 @@
         android:layout_marginTop="40dp"
         android:textSize="25sp"
         android:textColor="@color/black"
-        android:backgroundTint="#E945BA"/>
+        android:backgroundTint="@color/home_button"/>
 
 
 </LinearLayout>

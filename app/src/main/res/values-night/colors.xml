@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic colors -->
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App background -->
+    <color name="app_background">#121212</color>
+
+    <!-- Main text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#E0E0E0</color>
+
+    <!-- Card -->
+    <color name="card_background">#242424</color>
+
+    <!-- Divider -->
+    <color name="divider_color">#80FFFFFF</color>
+
+    <!-- Button -->
+    <color name="next_button">#4CAF50</color>
+
+    <!-- Login / Register -->
+    <color name="input_background">#30FFFFFF</color>
+    <color name="input_hint">#FFFFFF</color>
+
+    <!-- Result screen -->
+    <color name="result_correct">#6F9E35</color>
+    <color name="result_wrong">#D32F2F</color>
+    <color name="result_total">#FFA000</color>
+    <color name="result_text">#FFFFFF</color>
+    <color name="result_progress_background">#B71C1C</color>
+    <color name="result_progress">#4CAF50</color>
+    <color name="home_button">#D81B9B</color>
+
+</resources>

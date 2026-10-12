@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:id="@+id/main"
-    android:background="#00BCD4"
+    android:background="@color/app_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -12,10 +12,22 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_background"
         app:title="@string/app_name"
-        app:titleTextColor="@color/white"
-        android:background="#00BCD4"/>
+        app:titleTextColor="@color/white">
+
+        <Button
+            android:id="@+id/signOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:text="Sign Out"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/home_button" />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -93,7 +105,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#27000000"
+                        android:backgroundTint="@color/card_background"
                         android:layout_weight="1"
                         tools:ignore="OnClick">
                         <LinearLayout
@@ -115,7 +127,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="JAVA"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="20sp"/>
                         </LinearLayout>
@@ -130,7 +142,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#27000000"
+                        android:backgroundTint="@color/card_background"
                         android:layout_weight="1"
                         tools:ignore="OnClick">
                         <LinearLayout
@@ -150,7 +162,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="KOTLIN"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="20sp"/>
                         </LinearLayout>
@@ -176,7 +188,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#27000000"
+                        android:backgroundTint="@color/card_background"
                         android:layout_weight="1"
                         tools:ignore="OnClick">
                         <LinearLayout
@@ -197,7 +209,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="PYTHON"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="20sp"/>
                         </LinearLayout>
@@ -212,7 +224,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#27000000"
+                        android:backgroundTint="@color/card_background"
                         android:layout_weight="1"
                         tools:ignore="OnClick">
                         <LinearLayout
@@ -233,7 +245,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="C++"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="20sp"/>
                         </LinearLayout>
@@ -259,7 +271,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#27000000"
+                        android:backgroundTint="@color/card_background"
                         android:layout_weight="1"
                         tools:ignore="OnClick">
                         <LinearLayout
@@ -280,7 +292,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="DART"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="20sp"/>
                         </LinearLayout>
@@ -295,7 +307,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#27000000"
+                        android:backgroundTint="@color/card_background"
                         android:layout_weight="1"
                         tools:ignore="OnClick">
                         <LinearLayout
@@ -316,7 +328,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="SQL"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="20sp"/>
                         </LinearLayout>
@@ -342,7 +354,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#27000000"
+                        android:backgroundTint="@color/card_background"
                         android:layout_weight="1"
                         tools:ignore="OnClick">
                         <LinearLayout
@@ -363,7 +375,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="XML"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="20sp"/>
                         </LinearLayout>
@@ -378,7 +390,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         app:cardCornerRadius="10dp"
-                        android:backgroundTint="#27000000"
+                        android:backgroundTint="@color/card_background"
                         android:layout_weight="1"
                         tools:ignore="OnClick">
                         <LinearLayout
@@ -399,7 +411,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="C Language"
-                                android:textColor="@color/black"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="20sp"/>
                         </LinearLayout>
